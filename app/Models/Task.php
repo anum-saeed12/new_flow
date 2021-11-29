@@ -21,12 +21,16 @@ class Task extends Model
         'updated_by'
     ];
 
-    public function created_by ()
+    public function creator()
     {
-        return $this->hasOne(User::class, 'id', 'created_by');
+        return $this->belongsTo(User::class, 'created_by');
     }
-    public function updated_by ()
+    public function updater()
     {
-        return $this->hasOne(User::class, 'id', 'updated_by');
+        return $this->belongsTo(User::class, 'updated_by');
+    }
+    public function members()
+    {
+        return $this->hasMany(TaskUser::class,'task_id')->with('user');
     }
 }

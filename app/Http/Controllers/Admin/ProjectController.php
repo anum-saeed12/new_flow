@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Exports\ProjectExport;
 use App\Http\Controllers\Controller;
 use App\Models\Alert;
 use App\Models\Project;
@@ -10,6 +11,7 @@ use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Maatwebsite\Excel\Facades\Excel;
 
 class ProjectController extends Controller
 {
@@ -149,8 +151,9 @@ class ProjectController extends Controller
         return redirect()->back()->with('success', 'Project has been deleted');
     }
 
-    public function exportproject()
+    public function exportProject()
     {
-
+        $date = Carbon::now()->format('Ymdih');
+        return Excel::download(new ProjectExport(), "Projects_{$date}.xlsx");
     }
 }

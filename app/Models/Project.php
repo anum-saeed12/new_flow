@@ -29,7 +29,10 @@ class Project extends Model
     }
     public function tasks()
     {
-        return $this->hasMany(Task::class, 'project_id', 'id');
+        return $this->hasMany(Task::class, 'project_id', 'id')->orderBy('id','ASC')
+            ->with('creator')
+            ->with('updater')
+            ->with('members');
     }
 
 }

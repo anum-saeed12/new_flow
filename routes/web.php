@@ -36,7 +36,7 @@ Route::prefix('/admin')->middleware('admin')->group(function() {
     Route::resource('/task', \App\Http\Controllers\Admin\TaskController::class, ['as' => 'admin']);
     Route::resource('/assignment', \App\Http\Controllers\Admin\AssignmentController::class, ['as' => 'admin']);
     Route::resource('/alerts', \App\Http\Controllers\Admin\AlertController::class, ['as' => 'admin']);
-    Route::get('/', '\App\Http\Controllers\Admin\ProjectController@exportproject')->name('project.export.admin');
+    Route::get('/projects/export', '\App\Http\Controllers\Admin\ProjectController@exportProject')->name('project.export.admin');
 
     Route::prefix('/user')->group(function() {
         Route::get('/', '\App\Http\Controllers\Admin\UserController@index')->name('user.index.admin');
@@ -57,7 +57,7 @@ Route::middleware('employee')->group(function() {
 
     Route::resource('/project', \App\Http\Controllers\Employee\ProjectController::class, ['as' => 'employee']);
     Route::resource('/task', \App\Http\Controllers\Employee\TaskController::class, ['as' => 'employee']);
-    Route::resource('/assignment', \App\Http\Controllers\Employee\AssignmentController::class, ['as' => 'employee']);
+    #Route::resource('/assignment', \App\Http\Controllers\Employee\AssignmentController::class, ['as' => 'employee']);
     Route::get('/task/{task_id}/completed','\App\Http\Controllers\Employee\TaskController@completed')->name('employee.task.completed');
     Route::resource('/alerts', \App\Http\Controllers\Employee\AlertController::class, ['as' => 'employee']);
 });
