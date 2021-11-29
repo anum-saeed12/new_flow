@@ -1,0 +1,102 @@
+.login-logo,.register-logo{font-size:2.1rem;margin-bottom:.9rem;text-align:center;font-family:"Poppins", sans-serif;font-weight:600;letter-spacing:.8px}
+.login-logo a,.register-logo a{color:#495057;font-family:"Poppins", sans-serif;font-weight:600;letter-spacing:.8px}
+.ac-suggested > div{padding:4px 0}.ac-suggested > ul{background:#fff;list-style:none;margin:0;padding:0;border:1px solid #e0e0e0;position:absolute;width:calc(100% - 15px);z-index:99}
+.ac-suggested > ul > li{margin:0;padding:8px 15px;list-style:none;border-bottom:1px solid #e0e0e0;cursor:pointer;transition:all .2s}
+.ac-suggested > ul > li:last-child{border-bottom:none}.ac-suggested > ul > li:hover{background:rgba(0, 0, 0, .06)}
+.clear-search{position:absolute;right:10px;color:#999;padding:8px 10px;margin-top:-36px;cursor:pointer;display:none}
+.total:not(.n){padding:15px 0;margin:0 auto;display:inline-block;font-family:"Poppins", sans-serif;font-weight:600;color:#303040}
+.quotation-info:empty{min-height:200px;background:rgba(240, 240, 240, 0.5)}
+.quotation-info:empty:after{display:block;content:"Select quotation for details";position:absolute;font-size:2em;color:#ccc;font-family:"Poppins", sans-serif;left:50%;top:50%;transform:translate(-50%, -50%);text-align:center}
+.quotation-status:empty{text-align:left;padding:8px 0}
+.quotation-status:empty:after{content:"Select quotation for status";color:#ccc}
+.lds-roller{display:inline-block;position:relative;width:80px;height:80px}
+.lds-roller div{animation:lds-roller 1.2s cubic-bezier(.5, 0, .5, 1) infinite;transform-origin:40px 40px}
+.lds-roller div:after{content:" ";display:block;position:absolute;width:7px;height:7px;border-radius:50%;background:#007bff;margin:-4px 0 0 -4px}
+.lds-roller div:nth-child(1){animation-delay:-0.036s}.lds-roller div:nth-child(1):after{top:63px;left:63px}.lds-roller div:nth-child(2){animation-delay:-0.072s}.lds-roller div:nth-child(2):after{top:68px;left:56px}.lds-roller div:nth-child(3){animation-delay:-0.108s}.lds-roller div:nth-child(3):after{top:71px;left:48px}.lds-roller div:nth-child(4){animation-delay:-0.144s}.lds-roller div:nth-child(4):after{top:72px;left:40px}.lds-roller div:nth-child(5){animation-delay:-0.18s}.lds-roller div:nth-child(5):after{top:71px;left:32px}.lds-roller div:nth-child(6){animation-delay:-0.216s}.lds-roller div:nth-child(6):after{top:68px;left:24px}.lds-roller div:nth-child(7){animation-delay:-0.252s}.lds-roller div:nth-child(7):after{top:63px;left:17px}.lds-roller div:nth-child(8){animation-delay:-0.288s}.lds-roller div:nth-child(8):after{top:56px;left:12px}@keyframes lds-roller{0%{transform:rotate(0deg);}100%{transform:rotate(360deg);}}
+.table.table-compact tr{height:25px}
+.table.table-compact tr > td {padding:0}
+.table.table-compact tr a:only-child:not(.list-btn) {display:block;padding:3px;color:inherit;}
+.table.table-compact tr a:only-child:hover {color:#000;}
+.no-select{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
+.capitalize{text-transform: capitalize;}
+label.normal {margin-bottom:5px!important;color:#666;line-height:normal;font-weight:normal!important;}
+.omni-filters {display:inline-block; margin:0 0 calc(.5rem + 7.5px);padding:.5rem calc(.5rem + 7.5px) calc(.5rem + 7.5px);background:#fff;box-shadow:0 0 4px #ccc;border-radius:4px;}
+.omni-filters h2 {font-size:.8rem;letter-spacing:1px;margin:0;border-bottom:1px solid #f1f2f2;padding:0 0 .3rem;color:#888;text-transform:uppercase;}
+.results-not-found {padding:2rem;color:#bbb;}
+.results-not-found > .graphics {margin:3rem auto;}
+.results-not-found > .graphics > i {font-size:8rem;z-index:0;}
+.results-not-found > .graphics > i:nth-child(2) {position:absolute;color:#ccc;font-size:14rem;margin:-3.5rem 0 0 -11.5rem;z-index:1;opacity:0.5;}
+.results-not-found > .msg:first-child {padding:0;margin:0 0 5rem;}
+.results-not-found > .msg {font-size:3rem;font-weight:200;margin:4rem 0 0;}
+*.list-btn {display:block;margin:3px 3px 3px 0;width:22px;height:22px;line-height:22px;text-align:center;font-size:12px;float:left;border-radius:3px;}
+*.list-btn:last-child:after {display:block;content:"";clear:left;}
+*.list-btn.text-success,
+*.list-btn.bg-success,
+*.list-btn.success {background:#28a745;color:#fff!important;}
+*.list-btn.text-danger,
+*.list-btn.bg-danger,
+*.list-btn.danger {background:#dc3545;color:#fff!important;}
+*.list-btn.text-warning,
+*.list-btn.bg-warning,
+*.list-btn.warning {background:#ffc107;color:#fff!important;}
+*.list-btn.text-primary,
+*.list-btn.bg-primary,
+*.list-btn.primary {background:#007bff;color:#fff!important;}
+.list-img-thumbnail {display:block;height:90px;width:75px;background:transparent center center no-repeat;background-size:cover;content:'';cursor:pointer;transition:.3s all;}
+.list-img-thumbnail:hover {background-size:cover;transform:scale(2);box-shadow:0 0 6px #999;}
+.category-selector {border: 1px solid #ccc;padding:1rem;}
+
+.content-wrapper {overflow-y:auto;}
+
+.list-container {white-space:nowrap;}
+.list-container:after {display:block;clear:both;content:"";}
+.list-container .list {background:#fff;display:inline-block;width:calc(100% / 4 - 16px);border:1px solid #ccc;margin:0 8px 16px;white-space:normal;vertical-align:top;}
+.list-container .list .title {padding:6px 8px;border-bottom:1px solid #ccc;margin:0;position:relative;}
+.list-container .list .title h6 {padding:0;margin:0;width:calc(100% - 30px);display:inline-block;}
+.list-container .list .title .actions {width:30px;text-align:center;display:inline-block;}
+.list-container .list h6 {font-weight:600;}
+.list-container .list p {padding:3px 8px;font-size:.8rem;line-height:normal}
+.list-container .list .task-container {padding:8px;}
+.list-container .list .task-container.empty {}
+.list-container .list .task-container.count-0:before,
+.list-container .list .task-container.empty:before {white-space:normal;display:block;content:"This project has no tasks. You can create new tasks by clicking on the button.";font-style:italic;font-weight:200;font-size:.8rem;margin-bottom:2rem;}
+.list-container .list .task-container.count-0.empty:before {content:"There is no project, You can create a new project by clicking the button below.";}
+.list-container .list .task-container *.task {display:block;border:1px solid #ccc;border-radius:4px;text-decoration:none;color:inherit;}
+.list-container .list .task-container *.task.task-completed {border:1px solid #cff3cf;}
+.list-container .list .task-container *.task.task-completed:hover {background: #f2fdf2;}
+.list-container .list .task-container *.task:not(:first-child) {margin-top:10px;}
+.list-container .list .task-container *.task:hover {background: #dcebf1;}
+.list-container .list .task-container *.task h6 {padding:3px 8px;margin:0;}
+.list-container .list .task-container *.task p {padding:3px 8px 8px;}
+
+.member-container {margin-top:1rem;}
+.member-container:empty {content:"No members assigned";font-style:italic;font-size:12px;}
+.member-container .member {position:relative;display:inline-block;width:40px;height:40px;background:transparent no-repeat center center;background-size:contain;border-radius:100%;margin-right:.5rem}
+.member-container .member *.remove {position:absolute;top:-4px;right:-4px;background:#666;width:14px;height:14px;font-size:14px;line-height:14px;color:#fff;text-decoration:none;text-align:center;border-radius:100%;}
+
+.btn-more {background:transparent;border:none;border-radius:4px;}
+.btn-more:hover {background:#ccc;}
+.menu-container {width:90%;position:absolute;top:33px;right:0;background:#fff;border:1px solid #ccc;padding:3px;border-radius:4px;box-shadow:2px 2px 4px #ccc;}
+.menu-container ul {list-style:none;margin:0;padding:0;}
+.menu-container ul li {}
+.menu-container ul li a {display:block;padding:5px 8px;color:inherit;white-space:nowrap;overflow:hidden;text-align:left;}
+.menu-container ul li a:hover {background:#eee;border-radius:4px;}
+
+
+/* Customize the label (the container) */
+.completed-container {padding:.5rem 0;height:38px;display:inline-block;position:relative;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;margin:0;vertical-align:top;}
+/* Hide the browser's default checkbox */
+.completed-container input[type='checkbox'] {position:absolute;opacity:0;cursor:pointer;height:0;width:0;display:none;}
+/* Create a custom checkbox */
+.completed {border-radius:4px;background-color:transparent;padding:.5rem 1rem;border:1px solid #2196F3;color:#2196F3;height:38px;}
+/* On mouse-over, add a grey background color */
+.completed-container:hover input ~ .completed {background-color:#e6f0f8;}
+/* When the checkbox is checked, add a blue background */
+.completed-container input:checked ~ .completed {background-color:#2196F3;color:#fff;padding:.5rem 1rem .5rem 1.8rem;}
+/* Create the checkmark/indicator (hidden when not checked) */
+.completed:before {content: "";position: absolute;display: none;}
+/* Show the checkmark when checked */
+.completed-container input:checked ~ .completed:before {display:block;}
+.completed-container input:checked ~ .completed:after {content:"d"}
+/* Style the checkmark/indicator */
+.completed-container .completed:before {left:.8rem;top:.7rem;width:7px;height:14px;border:solid white;border-width:0 3px 3px 0;-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg);}
