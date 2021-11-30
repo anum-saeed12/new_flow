@@ -18,6 +18,11 @@ class User extends Authenticatable
     protected $hidden = ['password','remember_token'];
     protected $fillable = ['email', 'username', 'password', 'user_role', 'created_by'];
 
+    public function task()
+    {
+        return $this->hasMany(TaskUser::class,'user_id');
+    }
+
     /**
      * Get the identifier that will be stored in the subject claim of the JWT.
      *

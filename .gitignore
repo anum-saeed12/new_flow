@@ -15,3 +15,4 @@ yarn-error.log
 .idea/*
 .DS_Store
 flow.iml
+/storage/framework/laravel-excel/

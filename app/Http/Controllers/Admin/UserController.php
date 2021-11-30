@@ -2,11 +2,15 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Exports\ProjectExport;
+use App\Exports\UserExport;
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Maatwebsite\Excel\Facades\Excel;
 
 class UserController extends Controller
 {
@@ -114,5 +118,11 @@ class UserController extends Controller
         return redirect(
             route('user.list.admin')
         )->with('success', 'User deleted successfully!');
+    }
+
+    public function exportUsers()
+    {
+        $date = Carbon::now()->format('Ymdih');
+        return Excel::download(new UserExport(2), "Users_{$date}.xlsx");
     }
 }

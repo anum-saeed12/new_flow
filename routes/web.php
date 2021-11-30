@@ -46,6 +46,7 @@ Route::prefix('/admin')->middleware('admin')->group(function() {
         Route::get('/edit/{id}', '\App\Http\Controllers\Admin\UserController@edit')->name('user.edit.admin');
         Route::post('/update/{id}', '\App\Http\Controllers\Admin\UserController@update')->name('user.update.admin');
         Route::get('/delete/{id}', '\App\Http\Controllers\Admin\UserController@delete')->name('user.delete.admin');
+        Route::get('/export', '\App\Http\Controllers\Admin\UserController@exportUsers')->name('user.export.admin');
     });
 
 
