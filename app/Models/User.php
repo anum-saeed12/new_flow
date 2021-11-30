@@ -23,6 +23,25 @@ class User extends Authenticatable
         return $this->hasMany(TaskUser::class,'user_id');
     }
 
+    public static function projects($id)
+    {
+        $task_user = (new TaskUser())->getTable();
+        $project = (new Project())->getTable();
+        $task = (new Task())->getTable();
+        $select = [
+            "{$project}.id"
+        ];
+        $project_ids = TaskUser::select($select)
+            ->join($task, "{$task}.id","=","{$task_user}.task_id")
+            ->leftJoin($project, "{$project}.id", "=", "{$task}.project_id")
+            ->where("{$task_user}.user_id", $id)
+            ->groupBy("{$project}.id")
+            ->get();
+
+        $projects = Project::whereIn('id', $project_ids)->with('tasks')->get();
+        return $projects;
+    }
+
     /**
      * Get the identifier that will be stored in the subject claim of the JWT.
      *

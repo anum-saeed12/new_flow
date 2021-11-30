@@ -31,7 +31,8 @@
         </tr>
         </thead>
         <tbody>
-            @foreach(tasks($project->id, $user_id) as $task)
+            @foreach($project->tasks as $task)
+                @if(!is_member($task->id, $user_id)) @continue @endif
                 <tr>
                     <td>{{ $loop->iteration }}</td>
                     <td>{{ $task->title }}</td>

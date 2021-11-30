@@ -82,3 +82,14 @@ if (!function_exists('alerts'))
         return \App\Models\Alert::instantiate();
     }
 }
+
+if (!function_exists('is_member'))
+{
+    function is_member($task_id,$user_id,$type='task')
+    {
+        $assignment = TaskUser::select('points')->where('task_id', $task_id)
+            ->where('user_id', $user_id)
+            ->first();
+        return $assignment;
+    }
+}

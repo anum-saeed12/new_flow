@@ -120,9 +120,12 @@ class UserController extends Controller
         )->with('success', 'User deleted successfully!');
     }
 
-    public function exportUsers()
+    public function exportUsers(Request $request)
     {
+        $request->validate([
+            'user' => 'required|int'
+        ]);
         $date = Carbon::now()->format('Ymdih');
-        return Excel::download(new UserExport(2), "Users_{$date}.xlsx");
+        return Excel::download(new UserExport($request->input('user')), "Users_{$date}.xlsx");
     }
 }
